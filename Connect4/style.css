@@ -1,0 +1,62 @@
+body {
+    font-family: "Comic Sans MS", Helvetica, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    margin: 20px 0;
+}
+
+
+#turn-indicator, #winner {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+
+#board {
+    height: 540px;
+    width: 630px;
+    background-color: blue;
+    border: 10px solid navy;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.tile {
+    height: 70px;
+    width: 70px;
+    margin: 5px;
+    background-color: white;
+    border-radius: 50%;
+    border: 5px solid navy;
+    cursor: pointer;
+}
+
+
+.red-piece {
+    background-color: red;
+}
+
+
+.yellow-piece {
+    background-color: yellow;
+}
+
+
+#restart-button{
+    margin: 20px;
+    background-color: lightgray;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
