@@ -1,4 +1,10 @@
 body
 {
-    background-color: rgb(159, 197, 232, 100);
+    background-color: #a1c2d2ff;
+}
+
+button
+{
+    height: 75px;
+    width: 150px;
 }
