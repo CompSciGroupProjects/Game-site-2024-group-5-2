@@ -453,7 +453,12 @@ function checkBox9()
 
 
 function computerMove() {
-if(block())
+
+if(goForWin())
+{
+
+}
+else if(block())
 {
 
 }
@@ -1085,6 +1090,491 @@ function block()
         return true;
     }
     else if(board[2] === 'X' && board[4] === 'X' && board[6] === '')
+    {
+        if (board[6] === "") {
+            board[6] = currentPlayer;
+            document.getElementById("box7").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    return false;
+}
+
+function goForWin()
+{
+    if(board[0] === 'O' && board[1] === 'O' && board[2] === '')
+    {
+        if (board[2] === "") {
+            board[2] = currentPlayer;
+            document.getElementById("box3").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    else if(board[0] === 'O' && board[1] === '' && board[2] === 'O')
+    {
+        if (board[1] === "") {
+            board[1] = currentPlayer;
+            document.getElementById("box2").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    else if(board[0] === '' && board[1] === 'O' && board[2] === 'O')
+    {
+        if (board[0] === "") {
+            board[0] = currentPlayer;
+            document.getElementById("box1").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    else if(board[3] === '' && board[4] === 'O' && board[5] === 'O')
+    {
+        if (board[3] === "") {
+            board[3] = currentPlayer;
+            document.getElementById("box4").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    else if(board[3] === 'O' && board[4] === '' && board[5] === 'O')
+    {
+        if (board[4] === "") {
+            board[4] = currentPlayer;
+            document.getElementById("box5").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    else if(board[3] === 'O' && board[4] === 'O' && board[5] === '')
+    {
+        if (board[5] === "") {
+            board[5] = currentPlayer;
+            document.getElementById("box6").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    else if(board[6] === '' && board[7] === 'O' && board[8] === 'O')
+    {
+        if (board[6] === "") {
+            board[6] = currentPlayer;
+            document.getElementById("box7").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    else if(board[6] === 'O' && board[7] === '' && board[8] === 'O')
+    {
+        if (board[7] === "") {
+            board[7] = currentPlayer;
+            document.getElementById("box8").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    else if(board[6] === 'O' && board[7] === 'O' && board[8] === '')
+    {
+        if (board[8] === "") {
+            board[8] = currentPlayer;
+            document.getElementById("box9").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    else if(board[0] === '' && board[3] === 'O' && board[6] === 'O')
+    {
+        if (board[0] === "") {
+            board[0] = currentPlayer;
+            document.getElementById("box1").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    else if(board[0] === 'O' && board[3] === '' && board[6] === 'O')
+    {
+        if (board[3] === "") {
+            board[3] = currentPlayer;
+            document.getElementById("box4").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    else if(board[0] === 'O' && board[3] === 'O' && board[6] === '')
+    {
+        if (board[6] === "") {
+            board[6] = currentPlayer;
+            document.getElementById("box7").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    else if(board[1] === '' && board[4] === 'O' && board[7] === 'O')
+    {
+        if (board[1] === "") {
+            board[1] = currentPlayer;
+            document.getElementById("box2").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    else if(board[1] === 'O' && board[4] === '' && board[7] === 'O')
+    {
+        if (board[4] === "") {
+            board[4] = currentPlayer;
+            document.getElementById("box5").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    else if(board[1] === 'O' && board[4] === 'O' && board[7] === '')
+    {
+        if (board[7] === "") {
+            board[7] = currentPlayer;
+            document.getElementById("box8").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    else if(board[2] === '' && board[5] === 'O' && board[8] === 'O')
+    {
+        if (board[2] === "") {
+            board[2] = currentPlayer;
+            document.getElementById("box3").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    else if(board[2] === 'O' && board[5] === '' && board[8] === 'O')
+    {
+        if (board[5] === "") {
+            board[5] = currentPlayer;
+            document.getElementById("box6").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    else if(board[2] === 'O' && board[5] === 'O' && board[8] === '')
+    {
+        if (board[8] === "") {
+            board[8] = currentPlayer;
+            document.getElementById("box9").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    else if(board[0] === '' && board[4] === 'O' && board[8] === 'O')
+    {
+        if (board[0] === "") {
+            board[0] = currentPlayer;
+            document.getElementById("box1").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    else if(board[0] === 'O' && board[4] === '' && board[8] === 'O')
+    {
+        if (board[4] === "") {
+            board[4] = currentPlayer;
+            document.getElementById("box5").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    else if(board[0] === 'O' && board[4] === 'O' && board[8] === '')
+    {
+        if (board[8] === "") {
+            board[8] = currentPlayer;
+            document.getElementById("box9").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    else if(board[2] === '' && board[4] === 'O' && board[6] === 'O')
+    {
+        if (board[2] === "") {
+            board[2] = currentPlayer;
+            document.getElementById("box3").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    else if(board[2] === 'O' && board[4] === '' && board[6] === 'O')
+    {
+        if (board[4] === "") {
+            board[4] = currentPlayer;
+            document.getElementById("box5").innerHTML = currentPlayer;
+            if (checkWin()) {
+                document.getElementById("result").innerHTML = currentPlayer + " has won";
+            } else if (checkTie()) {
+                document.getElementById("result").innerHTML = "It is a tie"
+            } else {
+                if (currentPlayer === 'X') {
+                    currentPlayer = 'O'
+                } else if (currentPlayer === 'O') {
+                    currentPlayer = 'X'
+                }
+                document.getElementById("result").innerHTML = "Player " + currentPlayer + " 's turn";
+            }
+        }
+        return true;
+    }
+    else if(board[2] === 'O' && board[4] === 'O' && board[6] === '')
     {
         if (board[6] === "") {
             board[6] = currentPlayer;
