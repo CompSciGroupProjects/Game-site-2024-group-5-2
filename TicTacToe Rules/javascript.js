@@ -1,4 +1,3 @@
-function goToGame()
-{
-    window.location.href = "TicTacToe"
+function goToGame() {
+    window.location.href ="../Connect4";
 }
