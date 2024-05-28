@@ -1,4 +1,4 @@
 function goToGame()
 {
-    window.location.href = "TicTacToe"
+    window.location.href = "../TicTacToe"
 }
