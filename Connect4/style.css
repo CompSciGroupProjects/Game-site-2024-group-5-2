@@ -5,7 +5,12 @@ body {
     margin: 0;
     padding: 0;
 }
+a {
+    font-weight: 700;
+    font-size: 23px;
+    color: black;
 
+}
 
 h1 {
     margin: 20px 0;
@@ -35,7 +40,7 @@ h1 {
     height: 70px;
     width: 70px;
     margin: 5px;
-    background-color: white;
+    background-color: #a1c2d2ff ;
     border-radius: 50%;
     border: 5px solid navy;
     cursor: pointer;
