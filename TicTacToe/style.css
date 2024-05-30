@@ -18,3 +18,9 @@ button
     height: 100px;
 }
 
+a {
+    font-weight: 700;
+    font-size: 23px;
+    color: black;
+
+}
