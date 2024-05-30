@@ -1,5 +1,12 @@
 body {
     background-color: Lightgrey;
+    font-family: "Comic Sans MS", Helvetica, sans-serif;
+}
+
+a {
+    font-weight: 700;
+    font-size: 23px;
+    color: black;
 }
 
 .col {
@@ -28,11 +35,4 @@ h1 {
     text-align: center;
     font-weight: bold;
     font-size: 25px;
-}
-
-a {
-    font-weight: 700;
-    font-size: 23px;
-    color: black;
-
 }
